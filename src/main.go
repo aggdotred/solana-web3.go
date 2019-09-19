@@ -17,7 +17,7 @@ func main() {
 		data, _ := ioutil.ReadAll(response.Body)
 		fmt.Println(string(data))
 	}
-	jsonData := map[string]string{"firstname": "Nic", "lastname": "Raboy"}
+	jsonData := map[string]string{"firstname": "Adam", "lastname": "Gutierrez"}
 	jsonValue, _ := json.Marshal(jsonData)
 	response, err = http.Post("https://httpbin.org/post", "application/json", bytes.NewBuffer(jsonValue))
 	if err != nil {
